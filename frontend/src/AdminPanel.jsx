@@ -72,7 +72,7 @@ function AdminPanel({ setPanel, setShowPassword }) {
       <button
         onClick={() => {
           setPanel(null);
-          setShowPassword(false); // wraca do wyboru panelu
+          setShowPassword(false); 
         }}
         style={buttonStyle}
         onMouseOver={buttonHover}
