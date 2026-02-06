@@ -6,6 +6,9 @@ import rentals from './endpoints/rentals.js';
 const app = new Hono();
 
 app.use('*', cors());
+
+app.get('/', (c) => c.text('Backend działa!'));
+
 app.route('/equipment', equipment);
 app.route('/rentals', rentals);
 
