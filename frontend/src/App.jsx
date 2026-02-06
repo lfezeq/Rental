@@ -42,7 +42,6 @@ function App() {
       .catch(console.error);
   };
 
-  // Usuń
   const handleDelete = (id) => {
     if (!id || !window.confirm("Na pewno usunąć?")) return;
 

@@ -35,4 +35,10 @@ app.delete('/:id', (c) => {
   return c.json({ success: result.changes > 0 });
 });
 
+app.get('/:id', (c) => {
+  const id = c.req.param('id');
+  const item = db.prepare('SELECT * FROM equipment WHERE id = ?').get(id);
+  return c.json(item);
+});
+
 export default app;
